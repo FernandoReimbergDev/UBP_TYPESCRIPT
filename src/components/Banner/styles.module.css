@@ -1,0 +1,47 @@
+.Banner {
+	width: 100%;
+	max-width: 1280px;
+	background-color: var(--white);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.Banner > img {
+	max-height: 80%;
+	max-width: 50%;
+}
+
+.revelScroll {
+	animation: slide-fade-in linear;
+	animation-timeline: view();
+	animation-range: entry -50%;
+}
+
+@keyframes slide-fade-in {
+	0% {
+		transform: translateY(150px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.Banner {
+		width: 100%;
+		height: 8rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.Banner > img {
+		max-width: 60%;
+	}
+}

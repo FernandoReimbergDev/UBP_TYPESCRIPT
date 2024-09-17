@@ -1,0 +1,142 @@
+.cardProduto {
+	width: 250px;
+	height: 350px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.cardProduto:hover {
+	outline: 2px solid var(--cor_principal);
+}
+
+.containerCard3d {
+	width: 200px;
+	position: relative;
+	perspective: 1000px;
+}
+
+.frontCard,
+.backCard {
+	width: 200px;
+	position: absolute;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: all 1s ease;
+	overflow: hidden;
+}
+
+.frontCard > img,
+.backCard > img {
+	width: 100%;
+	overflow: hidden;
+}
+
+.frontCard {
+	transform: rotateY(0deg);
+}
+
+.backCard {
+	transform: rotateY(180deg);
+}
+
+/* .cardProduto:hover .frontCard {
+      transform: rotateY(-180deg);
+    }
+  
+    .cardProduto:hover .backCard {
+      transform: rotateY(0deg);
+    } */
+
+.imgFrontCard,
+.imgBackCard {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.codigoProdutoCard {
+	font-weight: 600;
+	color: var(--cor_principal);
+	font-size: 1.6rem;
+	line-height: 1;
+	width: 220px;
+	margin: 210px auto 5px auto;
+	text-align: center;
+	max-height: 3rem;
+	min-height: 3rem;
+	overflow: hidden;
+}
+
+.PrecoProdutoCard {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.nota {
+	font-size: 12px;
+	margin-bottom: 5px;
+	position: absolute;
+	bottom: 45px;
+}
+
+.cardProduto > .adicionarCompra {
+	margin: auto;
+	position: absolute;
+	bottom: 5px;
+}
+
+@media (max-width: 599px) {
+	.cardProduto {
+		width: 160px;
+		height: 250px;
+		padding: 5px;
+	}
+
+	.containerCard3d {
+		width: 130px;
+	}
+
+	.frontCard,
+	.backCard {
+		width: 120px;
+	}
+
+	.frontCard > img,
+	.backCard > img {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.imgFrontCard,
+	.imgBackCard {
+		width: 100%;
+		border-radius: 10px;
+	}
+
+	.codigoProdutoCard {
+		font-size: 1.4rem;
+		line-height: 1.2;
+		width: 100%;
+		margin: 125px auto 5px auto;
+		text-align: center;
+		max-height: 3rem;
+		min-height: 3rem;
+		overflow: hidden;
+	}
+
+	.PrecoProdutoCard {
+		font-weight: 500;
+	}
+
+	.nota {
+		font-size: 12px;
+		position: absolute;
+		bottom: 40px;
+	}
+}

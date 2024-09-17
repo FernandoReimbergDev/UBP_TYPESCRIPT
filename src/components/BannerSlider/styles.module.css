@@ -1,0 +1,357 @@
+/*CSS CONTAINER-SLIDER*/
+.container-slider {
+	width: 100%;
+	height: 70vh;
+	background-color: var(--cor_principal);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	transition: background 0.3s ease-in-out;
+}
+
+.nextSlider {
+	position: absolute;
+	right: 1.5rem;
+	font-size: 2rem;
+	cursor: pointer;
+	color: var(--white);
+	z-index: 100;
+}
+
+.backSlider {
+	position: absolute;
+	left: 1.5rem;
+	font-size: 2rem;
+	cursor: pointer;
+	color: var(--white);
+	z-index: 100;
+}
+
+.box-info-produto {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-imagem-produto {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.produto-info {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+	margin-left: 40%;
+	animation: surgirDaEsquerda 0.9s ease-in-out forwards;
+}
+
+.sumirParaEsquerda {
+	animation: sumirParaEsquerda 0.9s ease-in-out forwards;
+}
+
+.detalhe {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 1.4rem;
+	color: white;
+	color: var(--white);
+}
+
+.iconeButton {
+	color: var(--green-400);
+}
+
+.codigoProduto {
+	font-size: 3.5rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: white;
+	min-height: 6rem;
+}
+
+.degradeBanner {
+	width: 400px;
+	height: 60%;
+	background: linear-gradient(var(--cor_principal), rgba(0, 0, 0, 0.2));
+	display: block;
+	transform: skew(-20deg);
+	position: absolute;
+	bottom: 0;
+	margin-right: 10%;
+}
+
+.imagens-produto-slider {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: 80%;
+	margin-right: 20%;
+	animation: surgirDaDireita 0.9s ease-in-out forwards;
+}
+
+.img-produto-slider {
+	height: 450px;
+	position: relative;
+}
+
+.subi-img-produto {
+	height: 300px;
+	position: relative;
+}
+
+.sumirParaDireita {
+	animation: sumirParaDireita 0.9s ease-in-out forwards;
+}
+
+@media (max-width: 459px) {
+	.container-slider {
+		height: 60vh;
+	}
+
+	.nextSlider,
+	.backSlider {
+		font-size: 1.5rem;
+	}
+
+	.vejaMaisBtn {
+		border-radius: 6px;
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.produto-info {
+		margin-left: 0;
+		height: 100%;
+		flex: 1;
+		text-align: left;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: 5rem;
+	}
+
+	.codigoProduto {
+		font-size: 2rem;
+	}
+
+	.imagens-produto-slider {
+		align-items: center;
+		margin-right: 0;
+		height: 100%;
+		gap: 0.2rem;
+		flex: 1;
+	}
+
+	.degradeBanner {
+		width: 200px;
+		height: 40%;
+	}
+
+	.img-produto-slider {
+		height: 220px;
+	}
+
+	.subi-img-produto {
+		display: none;
+	}
+}
+
+@media (min-width: 460px) and (max-width: 768px) {
+	.container-slider {
+		height: 60vh;
+	}
+
+	.vejaMaisBtn {
+		border-radius: 6px;
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+	.nextSlider,
+	.backSlider {
+		font-size: 1.5rem;
+	}
+
+	.produto-info {
+		margin-left: 0;
+		height: 100%;
+		flex: 1;
+		text-align: left;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: 8rem;
+	}
+
+	.codigoProduto {
+		font-size: 2.2rem;
+	}
+
+	.imagens-produto-slider {
+		align-items: center;
+		margin-right: 0;
+		height: 100%;
+		gap: 0.2rem;
+		flex: 1;
+	}
+
+	.degradeBanner {
+		width: 300px;
+		height: 40%;
+	}
+
+	.img-produto-slider {
+		height: 300px;
+	}
+
+	.subi-img-produto {
+		display: none;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1140px) {
+	.container-slider {
+		height: 60vh;
+	}
+
+	.nextSlider,
+	.backSlider {
+		font-size: 1.5rem;
+	}
+
+	.produto-info {
+		margin-left: 0;
+		height: 100%;
+		flex: 1;
+		text-align: left;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: 10rem;
+	}
+
+	.codigoProduto {
+		font-size: 3rem;
+	}
+
+	.imagens-produto-slider {
+		align-items: center;
+		margin-right: 0;
+		height: 100%;
+		flex: 1;
+	}
+
+	.degradeBanner {
+		width: 300px;
+		height: 40%;
+	}
+
+	.img-produto-slider {
+		height: 350px;
+	}
+
+	.subi-img-produto {
+		display: none;
+	}
+}
+
+@media (min-width: 1141px) and (max-width: 1366px) {
+	.container-slider {
+		height: 60vh;
+	}
+
+	.nextSlider,
+	.backSlider {
+		font-size: 1.5rem;
+	}
+
+	.produto-info {
+		margin-left: 0;
+		height: 100%;
+		flex: 1;
+		text-align: left;
+		align-items: flex-start;
+		justify-content: center;
+		padding-left: 20rem;
+	}
+
+	.codigoProduto {
+		font-size: 3rem;
+	}
+
+	.imagens-produto-slider {
+		align-items: center;
+		margin-right: 0;
+		height: 100%;
+		flex: 1;
+	}
+
+	.degradeBanner {
+		width: 300px;
+		height: 40%;
+	}
+
+	.img-produto-slider {
+		height: 350px;
+	}
+
+	.subi-img-produto {
+		height: 250px;
+	}
+}
+
+@keyframes surgirDaDireita {
+	from {
+		opacity: 0;
+		translate: 15vw 0;
+	}
+
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
+}
+
+@keyframes surgirDaEsquerda {
+	from {
+		opacity: 0;
+		translate: -15vw 0;
+	}
+
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
+}
+
+@keyframes sumirParaEsquerda {
+	from {
+		opacity: 1;
+		translate: 0 0;
+	}
+
+	to {
+		opacity: 0;
+		translate: -15vw 0;
+	}
+}
+
+@keyframes sumirParaDireita {
+	from {
+		opacity: 1;
+		translate: 0 0;
+	}
+
+	to {
+		opacity: 0;
+		translate: 15vw 0;
+	}
+}

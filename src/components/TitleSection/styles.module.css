@@ -1,0 +1,23 @@
+.titleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1rem;
+	gap: 0.5rem;
+}
+
+.titleContainer > P {
+	color: var(--color--text_color);
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+
+.titleContainer > svg {
+	color: var(--green-500);
+}
+
+@media (max-width: 768px) {
+	.titleContainer > P {
+		font-size: 1.6rem;
+	}
+}

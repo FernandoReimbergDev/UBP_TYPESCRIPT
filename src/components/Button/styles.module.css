@@ -1,0 +1,71 @@
+.adicionarCompra {
+	width: 150px;
+	height: 40px;
+	min-height: 40px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 1.4rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--cor_principal);
+	cursor: pointer;
+	flex-wrap: wrap;
+	transition: background 0.3s;
+}
+
+.adicionarCompra:hover {
+	background-color: var(--green-500);
+}
+.vejaMaisBtn {
+	border-radius: 6px;
+	padding: 1rem;
+	border: none;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+	background-color: var(--cor_auxiliar);
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-size: 1.4rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	cursor: pointer;
+	color: var(--blue-700);
+	transition: all 0.3s;
+	text-transform: capitalize;
+}
+
+.vejaMaisBtn svg,
+.adicionarCompra svg {
+	font-size: 2rem;
+}
+
+.vejaMaisBtn:hover {
+	background-color: var(--green-500);
+	color: var(--white);
+}
+
+@media (max-width: 768px) {
+	.adicionarCompra {
+		width: 100px;
+		margin: auto;
+		height: 25px;
+		min-height: 40px;
+		gap: 5px;
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1140px) {
+}
+
+@media (min-width: 1141px) and (max-width: 1366px) {
+}

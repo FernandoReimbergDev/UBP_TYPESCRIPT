@@ -1,0 +1,282 @@
+@media (min-width: 1140px) {
+	.containerNavbar.fixed {
+		height: 8rem;
+		width: 100%;
+		position: fixed;
+		background-color: var(--subcor_principal);
+		z-index: 1000;
+	}
+}
+
+header {
+	max-width: 1280px;
+	width: 100%;
+	border-radius: 10px;
+	padding: 8px 16px;
+	background: white;
+	min-height: 5.5rem;
+	height: 5.5rem;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 10000;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.icone-menu-mobile {
+	display: none;
+}
+
+.logoHeader {
+	height: 30px;
+}
+
+.box-caixa-pesquisa {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-right: 4rem;
+}
+
+.box-caixa-pesquisa input {
+	padding: 6px;
+	width: 200px;
+	height: 3.5rem;
+	border-radius: 4px;
+	border: none;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px
+		1px 3px 1px;
+	font-size: 1.4rem;
+	color: var(--text_color);
+}
+
+.box-caixa-pesquisa input:focus {
+	outline: 2px solid var(--cor_principal);
+}
+
+.box-caixa-pesquisa button {
+	position: absolute;
+	cursor: pointer;
+	color: var(--cor_principal);
+	background-color: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	margin-right: 7rem;
+}
+
+.menuNav {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 20px;
+}
+
+.menuNav li {
+	position: relative;
+}
+
+.menuNav a {
+	text-decoration: none;
+	color: var(--text_color);
+	font-weight: 700;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+.menuNav a:hover {
+	color: var(--cor_principal);
+}
+
+.dropdown-adm,
+.dropdown-mais {
+	display: none;
+	width: 20rem;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: transparent;
+	border: none;
+	z-index: 1000;
+	padding: 20px 0 0;
+}
+
+.menu-adm:hover .dropdown-adm,
+.menu-mais:hover .dropdown-mais {
+	display: block;
+}
+
+.dropdown-adm ul,
+.dropdown-mais ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: var(--white);
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-adm li,
+.dropdown-mais li {
+	padding: 10px 10px 10px 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 4px;
+}
+
+.dropdown-adm a,
+.dropdown-mais a {
+	text-decoration: none;
+	color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+
+.dropdown-adm a i,
+.dropdown-mais a i {
+	margin-right: 10px;
+}
+
+.dropdown-adm li:hover,
+.dropdown-mais li:hover {
+	background-color: #f0f0f0;
+}
+
+.iconeSacola {
+	font-size: 32px;
+	cursor: pointer;
+	margin-left: 30px;
+	position: absolute;
+	right: 2rem;
+}
+
+.iconeSacola:hover,
+.icone-menu-mobile:hover {
+	color: var(--subcor_principal);
+}
+
+@media (max-width: 1140px) {
+	header {
+		width: 100%;
+		border-radius: 10px;
+		padding: 8px 16px;
+		background: var(--white);
+		min-height: 5.5rem;
+		height: 5.5rem;
+		margin: 0 auto;
+		border-radius: 0;
+		justify-content: space-between;
+	}
+
+	.menuNav {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 20px;
+	}
+
+	.icone-menu-mobile {
+		display: block;
+		cursor: pointer;
+	}
+
+	.menu-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		position: absolute;
+		height: fit-content;
+		width: 300px;
+		background-color: var(--white);
+		top: 5.6rem;
+		left: 0;
+		padding: 1.6rem;
+		gap: 2rem;
+		border-radius: 6px;
+		transform: translateX(-100vw);
+		transition: transform 0.3s ease;
+	}
+
+	.menu-nav.menu-open {
+		transform: translateX(0vw);
+	}
+
+	.box-caixa-pesquisa {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		position: relative;
+	}
+
+	.box-caixa-pesquisa input {
+		width: 270px;
+		padding: 6px;
+	}
+
+	.box-caixa-pesquisa button {
+		right: 1rem;
+	}
+
+	.iconeSacola {
+		position: relative;
+	}
+
+	.dropdown-adm,
+	.dropdown-mais {
+		position: relative;
+	}
+
+	.dropdown-adm,
+	.dropdown-mais {
+		display: block;
+		max-height: 0;
+		overflow: hidden;
+		padding: 0;
+		transition: all 0.6s;
+	}
+
+	.admDropdownOpen,
+	.maisDropdownOpen {
+		display: block;
+		max-height: 500px;
+		border: none;
+		box-shadow: none;
+	}
+}
+
+@media (min-width: 1141px) and (max-width: 1366px) {
+	header {
+		max-width: 1140px;
+	}
+
+	nav.menu-open {
+		transform: translateX(0vw);
+	}
+
+	.iconeSacola {
+		position: relative;
+	}
+}
